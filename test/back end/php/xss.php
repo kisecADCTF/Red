@@ -7,11 +7,19 @@
         </form>
     </body>
 </html>
+
 <?php
 
     $text = $_GET['text'];
+    //if(isset($test)) {
+    if(preg_match('/</', $_GET['text'])) {
+        $a = preg_replace('/</', "&lt", $_GET['text']);
+        echo $a;
+        }
+    else{
+        echo $_GET['text'];
+    }
 
-    echo $text;
-
+//   <script>alert(1)</script>
 
 ?>

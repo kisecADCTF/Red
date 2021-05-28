@@ -1,4 +1,4 @@
 <?php
 
-    $conn = mysqli_connect('192.168.55.12', 'root', 'kisec1234','test', 30501)
+    $conn = mysqli_connect('10.10.0.142', 'root', 'kisec123','test', 32001)
         or die('Error while connecting SQL: '.mysqli_error($conn));

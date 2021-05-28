@@ -23,6 +23,9 @@
             exit;
         }
         */
+        $AA = array("/</","/>/","/script/");
+        $a = preg_replace('/</', "&lgt", $test);
+        echo $a;
         $fp = fopen($file_path, 'w');
         flock($fp, LOCK_EX);
         fwrite($fp, $_POST['text']  .chr(13).chr(10), strlen($_POST['text']));
@@ -30,3 +33,4 @@
         fclose($fp);
         header("Refresh:0");
     }
+?>
